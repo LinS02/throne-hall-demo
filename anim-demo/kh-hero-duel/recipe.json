@@ -1,0 +1,42 @@
+{
+ "note": "補記（2026-10-04）：當初沒有配方，從過去的對話紀錄找回；用同一組參數重跑 Idle_Loop 與現有圖逐像素相同。重現：照順序、每一筆用 env 跑 script（repo 根目錄）。 第 0 步：把 kh-cast-hero-doll 的五張圖與 manifest.json 複製進來（或照 kh-cast-hero-doll/recipe.json 先跑那兩筆、DOLL_OUT 換成 kh-hero-duel）。動作關節：KK_SET=hero_duel KK_OUT=generated-hero-duel blender -b --factory-startup -P tools/art/blender/kaykit_joints.py",
+ "runs": [
+  {
+   "script": "tools/art/blender/doll_sword.py",
+   "env": {
+    "DOLL_CAST": "hero",
+    "DOLL_DUAL": "1",
+    "DOLL_WEAPON": "twin",
+    "DOLL_JSON": "/tmp/male_hero.json（sprites-male.ts 匯出的 MALE_SET）",
+    "DOLL_OUT": "kh-hero-duel",
+    "DOLL_JOINTS": "art-src/creatures/quat-demo/generated-kaykit/joints.json"
+   }
+  },
+  {
+   "script": "tools/art/blender/doll_sword.py",
+   "env": {
+    "DOLL_CAST": "hero",
+    "DOLL_DUAL": "1",
+    "DOLL_WEAPON": "twin",
+    "DOLL_JSON": "/tmp/male_hero.json（sprites-male.ts 匯出的 MALE_SET）",
+    "DOLL_OUT": "kh-hero-duel",
+    "DOLL_MERGE": "1",
+    "DOLL_ONLY": "Walk_Loop",
+    "DOLL_JOINTS": "art-src/creatures/quat-demo/generated-dolljoints/joints.json"
+   }
+  },
+  {
+   "script": "tools/art/blender/doll_sword.py",
+   "env": {
+    "DOLL_CAST": "hero",
+    "DOLL_DUAL": "1",
+    "DOLL_WEAPON": "twin",
+    "DOLL_JSON": "/tmp/male_hero.json（sprites-male.ts 匯出的 MALE_SET）",
+    "DOLL_OUT": "kh-hero-duel",
+    "DOLL_MERGE": "1",
+    "DOLL_ONLY": "Run_Loop,Cast_Enter,Cast_Loop,Cast_Exit,Hit",
+    "DOLL_JOINTS": "art-src/creatures/quat-demo/generated-hero-duel/joints.json"
+   }
+  }
+ ]
+}
