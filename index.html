@@ -78,10 +78,22 @@ if (!new URLSearchParams(location.search).get('scene')) location.replace('?scene
 (function () {
   var bar = document.getElementById('boot-bar'), msg = document.getElementById('boot-msg');
   var x = new XMLHttpRequest();
-  x.open('GET', 'bundle.js');
+  x.open('GET', 'bundle.js?v=d35b583b20');
   x.onprogress = function (e) { var t = e.total || 4000000; var p = Math.min(1, e.loaded / t); bar.style.width = (p * 70) + '%'; msg.textContent = '下載中… ' + Math.round(p * 100) + '%'; };
   x.onload = function () { bar.style.width = '75%'; msg.textContent = '建立大殿…'; var s = document.createElement('script'); s.textContent = x.responseText; document.body.appendChild(s); };
   x.onerror = function () { msg.textContent = '下載失敗，請重新整理'; };
+  // 保險：遊戲已經好了（__cq.ready）但 4 秒內沒人把預讀畫面換成「點一下開始」（例：瀏覽器拿到舊的 bundle）→ 這裡自己換
+  var since = 0;
+  var guard = setInterval(function () {
+    var el = document.getElementById('boot');
+    if (!el) return clearInterval(guard);
+    if (!(window.__cq && window.__cq.ready) || el.classList.contains('ready')) return;
+    if (!since) since = Date.now();
+    if (Date.now() - since < 4000) return;
+    clearInterval(guard);
+    bar.style.width = '100%'; msg.textContent = '點一下開始'; el.classList.add('ready');
+    el.addEventListener('pointerdown', function () { el.classList.add('gone'); setTimeout(function () { el.remove(); }, 800); }, { once: true });
+  }, 250);
   x.send();
 })();
 </script>
