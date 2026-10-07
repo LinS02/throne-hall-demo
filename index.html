@@ -34,6 +34,8 @@ if (!new URLSearchParams(location.search).get('scene')) location.replace('?scene
   // 還在載的圖與 fetch（紙娃娃 v2 的動作圖是非同步載的）：runtime 等它歸零才開始 play
   var pending = 0;
   window.__pending = function () { return pending; };
+  // fetch 回來之後還要解碼的（GLB 的 meshopt／KTX2 轉碼在 worker 裡）：情境把那個 promise 交給 __hold，完成前一樣算在載
+  window.__hold = function (p) { pending++; Promise.resolve(p).finally(function () { pending--; }); return p; };
   var origFetch = window.fetch;
   window.fetch = function () {
     pending++;
@@ -78,7 +80,7 @@ if (!new URLSearchParams(location.search).get('scene')) location.replace('?scene
 (function () {
   var bar = document.getElementById('boot-bar'), msg = document.getElementById('boot-msg');
   var x = new XMLHttpRequest();
-  x.open('GET', 'bundle.js?v=d35b583b20');
+  x.open('GET', 'bundle.js?v=6d1c61e371');
   x.onprogress = function (e) { var t = e.total || 4000000; var p = Math.min(1, e.loaded / t); bar.style.width = (p * 70) + '%'; msg.textContent = '下載中… ' + Math.round(p * 100) + '%'; };
   x.onload = function () { bar.style.width = '75%'; msg.textContent = '建立大殿…'; var s = document.createElement('script'); s.textContent = x.responseText; document.body.appendChild(s); };
   x.onerror = function () { msg.textContent = '下載失敗，請重新整理'; };

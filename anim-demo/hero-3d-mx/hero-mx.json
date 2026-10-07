@@ -1,0 +1,393 @@
+{
+ "glb": "anim-demo/hero-3d-mx/hero-mx.glb",
+ "k": 1.11795,
+ "armature_scale": 0.8945,
+ "swd": [
+  0.0,
+  -1.0,
+  0.0
+ ],
+ "sub_keys_per_frame": 6,
+ "bones": [
+  "mixamorig:Hips",
+  "mixamorig:Spine",
+  "mixamorig:Spine1",
+  "mixamorig:Spine2",
+  "mixamorig:Neck",
+  "mixamorig:Head",
+  "mixamorig:RightShoulder",
+  "mixamorig:RightArm",
+  "mixamorig:RightForeArm",
+  "mixamorig:RightHand",
+  "slot_r",
+  "mixamorig:LeftShoulder",
+  "mixamorig:LeftArm",
+  "mixamorig:LeftForeArm",
+  "mixamorig:LeftHand",
+  "slot_l",
+  "mixamorig:RightUpLeg",
+  "mixamorig:RightLeg",
+  "mixamorig:RightFoot",
+  "mixamorig:RightToeBase",
+  "mixamorig:LeftUpLeg",
+  "mixamorig:LeftLeg",
+  "mixamorig:LeftFoot",
+  "mixamorig:LeftToeBase"
+ ],
+ "meshes": [
+  "hero_role1",
+  "hero_leather",
+  "hero_shell",
+  "hero_metal",
+  "hero_band",
+  "hero_void",
+  "hero_role2",
+  "hero_strap",
+  "hero_teal",
+  "hero_role3"
+ ],
+ "tris": 1324,
+ "clips_kaykit_retargeted": [
+  "Idle_B",
+  "Hit_B",
+  "Death_A",
+  "Use_Item",
+  "Melee_1H_Attack_Chop",
+  "Melee_1H_Attack_Jump_Chop",
+  "Melee_1H_Attack_Slice_Diagonal",
+  "Melee_1H_Attack_Slice_Horizontal",
+  "Melee_2H_Idle",
+  "Melee_Block",
+  "Melee_Block_Attack",
+  "Melee_Block_Hit",
+  "Melee_Blocking",
+  "Melee_Dualwield_Attack_Chop",
+  "Melee_Dualwield_Attack_Slice",
+  "Melee_Dualwield_Attack_Stab",
+  "Melee_Unarmed_Attack_Kick",
+  "Jump_Idle",
+  "Jump_Land",
+  "Jump_Start",
+  "Running_A",
+  "Running_B",
+  "Walking_A",
+  "Dodge_Backward",
+  "Dodge_Forward",
+  "Ranged_Magic_Shoot",
+  "Ranged_Magic_Spellcasting_Long"
+ ],
+ "verify_mm_worst": {
+  "sword": 0.0062,
+  "blade_tip": 0.0062,
+  "glove": 0.0037,
+  "all": 0.0062
+ },
+ "verify_mm": {
+  "Idle_B": {
+   "sword": 0.0039,
+   "blade_tip": 0.0038,
+   "glove": 0.0036,
+   "all": 0.0039,
+   "frames": 52
+  },
+  "Hit_B": {
+   "sword": 0.0039,
+   "blade_tip": 0.0039,
+   "glove": 0.0035,
+   "all": 0.0039,
+   "frames": 21
+  },
+  "Death_A": {
+   "sword": 0.0042,
+   "blade_tip": 0.0042,
+   "glove": 0.0031,
+   "all": 0.0042,
+   "frames": 20
+  },
+  "Use_Item": {
+   "sword": 0.004,
+   "blade_tip": 0.004,
+   "glove": 0.0035,
+   "all": 0.004,
+   "frames": 39
+  },
+  "Melee_1H_Attack_Chop": {
+   "sword": 0.0043,
+   "blade_tip": 0.0043,
+   "glove": 0.0036,
+   "all": 0.0043,
+   "frames": 26
+  },
+  "Melee_1H_Attack_Jump_Chop": {
+   "sword": 0.0043,
+   "blade_tip": 0.0043,
+   "glove": 0.0028,
+   "all": 0.0043,
+   "frames": 33
+  },
+  "Melee_1H_Attack_Slice_Diagonal": {
+   "sword": 0.0045,
+   "blade_tip": 0.0045,
+   "glove": 0.0037,
+   "all": 0.0045,
+   "frames": 25
+  },
+  "Melee_1H_Attack_Slice_Horizontal": {
+   "sword": 0.0055,
+   "blade_tip": 0.0055,
+   "glove": 0.0029,
+   "all": 0.0055,
+   "frames": 33
+  },
+  "Melee_2H_Idle": {
+   "sword": 0.0029,
+   "blade_tip": 0.0029,
+   "glove": 0.0024,
+   "all": 0.0029,
+   "frames": 26
+  },
+  "Melee_Block": {
+   "sword": 0.0029,
+   "blade_tip": 0.0029,
+   "glove": 0.002,
+   "all": 0.0029,
+   "frames": 26
+  },
+  "Melee_Block_Attack": {
+   "sword": 0.003,
+   "blade_tip": 0.0029,
+   "glove": 0.0026,
+   "all": 0.003,
+   "frames": 26
+  },
+  "Melee_Block_Hit": {
+   "sword": 0.0035,
+   "blade_tip": 0.0035,
+   "glove": 0.002,
+   "all": 0.0035,
+   "frames": 26
+  },
+  "Melee_Blocking": {
+   "sword": 0.0025,
+   "blade_tip": 0.0025,
+   "glove": 0.002,
+   "all": 0.0025,
+   "frames": 26
+  },
+  "Melee_Dualwield_Attack_Chop": {
+   "sword": 0.0041,
+   "blade_tip": 0.0041,
+   "glove": 0.0034,
+   "all": 0.0041,
+   "frames": 31
+  },
+  "Melee_Dualwield_Attack_Slice": {
+   "sword": 0.0062,
+   "blade_tip": 0.0062,
+   "glove": 0.0035,
+   "all": 0.0062,
+   "frames": 29
+  },
+  "Melee_Dualwield_Attack_Stab": {
+   "sword": 0.0042,
+   "blade_tip": 0.0042,
+   "glove": 0.0033,
+   "all": 0.0042,
+   "frames": 39
+  },
+  "Melee_Unarmed_Attack_Kick": {
+   "sword": 0.0037,
+   "blade_tip": 0.0037,
+   "glove": 0.0034,
+   "all": 0.0037,
+   "frames": 23
+  },
+  "Jump_Idle": {
+   "sword": 0.0037,
+   "blade_tip": 0.0037,
+   "glove": 0.0023,
+   "all": 0.0037,
+   "frames": 26
+  },
+  "Jump_Land": {
+   "sword": 0.0036,
+   "blade_tip": 0.0036,
+   "glove": 0.002,
+   "all": 0.0036,
+   "frames": 17
+  },
+  "Jump_Start": {
+   "sword": 0.0036,
+   "blade_tip": 0.0036,
+   "glove": 0.002,
+   "all": 0.0036,
+   "frames": 15
+  },
+  "Running_A": {
+   "sword": 0.0025,
+   "blade_tip": 0.0025,
+   "glove": 0.0023,
+   "all": 0.0027,
+   "frames": 20
+  },
+  "Running_B": {
+   "sword": 0.0027,
+   "blade_tip": 0.0024,
+   "glove": 0.0025,
+   "all": 0.0027,
+   "frames": 20
+  },
+  "Walking_A": {
+   "sword": 0.0027,
+   "blade_tip": 0.0027,
+   "glove": 0.0023,
+   "all": 0.0027,
+   "frames": 26
+  },
+  "Dodge_Backward": {
+   "sword": 0.0033,
+   "blade_tip": 0.0033,
+   "glove": 0.0025,
+   "all": 0.0033,
+   "frames": 10
+  },
+  "Dodge_Forward": {
+   "sword": 0.0026,
+   "blade_tip": 0.0026,
+   "glove": 0.0022,
+   "all": 0.0026,
+   "frames": 10
+  },
+  "Ranged_Magic_Shoot": {
+   "sword": 0.0038,
+   "blade_tip": 0.0038,
+   "glove": 0.0027,
+   "all": 0.0038,
+   "frames": 23
+  },
+  "Ranged_Magic_Spellcasting_Long": {
+   "sword": 0.0028,
+   "blade_tip": 0.0028,
+   "glove": 0.0026,
+   "all": 0.0028,
+   "frames": 61
+  }
+ },
+ "knee_xbot_vs_hero": {
+  "Left": 0.1006,
+  "Right": 0.1006
+ },
+ "joints_glb_units": {
+  "Hips": [
+   0.0,
+   0.0,
+   0.9327
+  ],
+  "Spine": [
+   0.0,
+   0.0,
+   1.004
+  ],
+  "Spine2": [
+   0.0,
+   0.0,
+   1.4738
+  ],
+  "Spine1": [
+   0.0,
+   0.0,
+   1.2389
+  ],
+  "Neck": [
+   0.0,
+   0.0,
+   1.7874
+  ],
+  "Head": [
+   0.0,
+   0.0,
+   1.8094
+  ],
+  "LeftArm": [
+   0.2227,
+   -0.0,
+   1.6415
+  ],
+  "LeftShoulder": [
+   0.0671,
+   0.0,
+   1.6461
+  ],
+  "LeftForeArm": [
+   0.5487,
+   0.0139,
+   1.6415
+  ],
+  "LeftHand": [
+   0.8993,
+   -0.0,
+   1.6415
+  ],
+  "LeftUpLeg": [
+   0.0734,
+   0.0143,
+   0.8723
+  ],
+  "LeftLeg": [
+   0.0734,
+   0.0112,
+   0.4755
+  ],
+  "LeftFoot": [
+   0.0734,
+   0.0384,
+   0.0781
+  ],
+  "LeftToeBase": [
+   0.0734,
+   -0.0574,
+   0.0
+  ],
+  "RightArm": [
+   -0.2227,
+   -0.0,
+   1.6415
+  ],
+  "RightShoulder": [
+   -0.0671,
+   0.0,
+   1.6461
+  ],
+  "RightForeArm": [
+   -0.5487,
+   0.0139,
+   1.6415
+  ],
+  "RightHand": [
+   -0.8993,
+   -0.0,
+   1.6415
+  ],
+  "RightUpLeg": [
+   -0.0734,
+   0.0143,
+   0.8723
+  ],
+  "RightLeg": [
+   -0.0734,
+   0.0112,
+   0.4755
+  ],
+  "RightFoot": [
+   -0.0734,
+   0.0384,
+   0.0781
+  ],
+  "RightToeBase": [
+   -0.0734,
+   -0.0574,
+   0.0
+  ]
+ },
+ "note": "主角零件（hero3d.build）掛 mixamorig 22 根＋劍槽 slot_l／r；27 支 KayKit clip 重定向烘進來（CC0）。沒有 Mixamo 動作在這個 GLB。 verify_mm：每支 clip 每一格每個頂點新舊最大差（sword＝劍三件、blade_tip＝劍身含劍尖、glove＝雙手、all＝全部）。"
+}
